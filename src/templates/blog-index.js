@@ -52,10 +52,9 @@ export default BlogIndex
 
 export const blogIndexFragment = graphql`
   query BlogPost($language: String!) {
-    config:markdownRemark(frontmatter: {
-      language: { eq: $language }
-      type: { eq: "language" }
-    }) {
+    config: markdownRemark(
+      frontmatter: { language: { eq: $language }, type: { eq: "language" } }
+    ) {
       html
       fields {
         slug
@@ -67,12 +66,11 @@ export const blogIndexFragment = graphql`
       }
     }
     allMarkdownRemark(
-        sort: { fields: [frontmatter___date], order: DESC }
-        filter: { frontmatter: {
-          language: { eq: $language }
-          type: { eq: null }
-        }}
-      ) {
+      sort: { fields: [frontmatter___date], order: DESC }
+      filter: {
+        frontmatter: { language: { eq: $language }, type: { eq: null } }
+      }
+    ) {
       edges {
         node {
           excerpt

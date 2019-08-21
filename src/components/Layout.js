@@ -9,7 +9,10 @@ class Layout extends React.Component {
     const { location, config, children, translations } = this.props
     let header
 
-    if (`${__PATH_PREFIX__}${config.fields.slug}` === location.pathname) {
+    if (
+      `${__PATH_PREFIX__}${config.fields.slug}` === location.pathname ||
+      location.pathname === '/'
+    ) {
       header = (
         <h1
           style={{
@@ -61,7 +64,10 @@ class Layout extends React.Component {
           padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
         }}
       >
-        <LanguageSwitcher language={config.frontmatter.language} translations={translations}/>
+        <LanguageSwitcher
+          language={config.frontmatter.language}
+          translations={translations}
+        />
         {header}
         {children}
       </div>

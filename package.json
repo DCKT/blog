@@ -1,10 +1,10 @@
 {
-  "name": "gatsby-starter-i18n-blog",
-  "description": "Starter Gatsby i18n Blog",
+  "name": "blog",
+  "description": "dck blog",
   "version": "1.0.0",
-  "author": "Joaquín Bravo Contreras <jackbravo@gmail.com>",
+  "author": "Thomas Deconinck",
   "bugs": {
-    "url": "https://github.com/jackbravo/gatsby-starter-i18n-blog/issues"
+    "url": "https://github.com/DCKT/blog/issues"
   },
   "dependencies": {
     "gatsby": "^2.0.19",
@@ -40,15 +40,15 @@
     "gh-pages": "^1.2.0",
     "prettier": "^1.14.2"
   },
-  "homepage": "https://github.com/jackbravo/gatsby-starter-i18n-blog#readme",
   "keywords": [
-    "gatsby"
+    "gatsby",
+    "blog"
   ],
   "license": "MIT",
   "main": "n/a",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jackbravo/gatsby-starter-blog.git"
+    "url": "git+https://github.com/DCKT/blog.git"
   },
   "scripts": {
     "dev": "gatsby develop",
