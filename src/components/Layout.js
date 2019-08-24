@@ -5,6 +5,14 @@ import DarkModeToggle from './DarkModeToggle'
 
 import { rhythm } from '../utils/typography'
 
+const styles = {
+  link: {
+    boxShadow: 'none',
+    textDecoration: 'none',
+    color: 'inherit',
+  },
+}
+
 export const Layout = ({ location, config, children, translations }) => {
   let header
 
@@ -15,19 +23,13 @@ export const Layout = ({ location, config, children, translations }) => {
     header = (
       <h1
         style={{
-          fontSize: '4rem',
+          fontSize: '2rem',
           marginBottom: rhythm(1.5),
           marginTop: 0,
+          textAlign: 'center',
         }}
       >
-        <Link
-          style={{
-            boxShadow: 'none',
-            textDecoration: 'none',
-            color: 'inherit',
-          }}
-          to={config.fields.slug}
-        >
+        <Link style={styles.link} to={config.fields.slug}>
           {config.frontmatter.title}
         </Link>
       </h1>
@@ -41,14 +43,7 @@ export const Layout = ({ location, config, children, translations }) => {
           marginBottom: rhythm(-1),
         }}
       >
-        <Link
-          style={{
-            boxShadow: 'none',
-            textDecoration: 'none',
-            color: 'inherit',
-          }}
-          to={'/'}
-        >
+        <Link style={styles.link} to={'/'}>
           {config.frontmatter.title}
         </Link>
       </h3>
@@ -62,12 +57,26 @@ export const Layout = ({ location, config, children, translations }) => {
         maxWidth: rhythm(24),
         padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
       }}
+      className="blog"
     >
-      <LanguageSwitcher
-        language={config.frontmatter.language}
-        translations={translations}
-      />
-      <DarkModeToggle />
+      <div
+        style={{
+          display: 'flex',
+          flexDirection: 'row',
+          justifyContent: 'space-between',
+          alignItems: 'center',
+          marginBottom: 20,
+        }}
+      >
+        <LanguageSwitcher
+          language={config.frontmatter.language}
+          translations={translations}
+        />
+        <DarkModeToggle />
+      </div>
+
+      <hr />
+
       {header}
       <div className="content">{children}</div>
     </div>

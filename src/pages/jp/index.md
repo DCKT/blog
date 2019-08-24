@@ -6,5 +6,5 @@ title: 'DCKのブログ'
 description: ''
 ---
 
-今日は！私は DCK です、ようこそ
-[私の Twitter：＠DCK＿](https://twitter.com/kylemathews)
+こんにちは！私は DCK です、ようこそ
+[私の Twitter：＠DCK＿](https://twitter.com/DCK__)

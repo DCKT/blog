@@ -1,6 +1,45 @@
+:root {
+  --primary: #ff5722;
+  --primary-dark: #ff8a65;
+
+  --background: #fff;
+  --background-dark: #273440;
+
+  --inlineCode-bg: #373c49;
+  --inlineCode-text: #e6e6e6;
+}
+
+hr {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.dark-mode hr {
+  background: rgba(0, 0, 0, 0.25);
+}
+
+.light-mode .blog a,
+.light-mode .blog button {
+  color: var(--primary);
+}
+
+.dark-mode .blog a,
+.dark-mode .blog button {
+  color: var(--primary-dark);
+}
+
+.light-mode {
+  background-color: var(--background);
+  color: #333;
+  transition: background-color 0.3s ease;
+}
+
+.dark-mode {
+  background-color: var(--background-dark);
+  color: #dfdfdf;
+}
+
 .dark-mode-toggle {
   display: flex;
-  margin: 0 auto;
 }
 
 .dark-mode-toggle > button {
@@ -62,33 +101,65 @@ input[type='checkbox'].dmcheck + label {
   background-color: #f6f6f6;
 }
 
-body.dark-mode .content code {
-  background-color: #1b2938;
-}
-
-body.dark-mode .content a {
-  color: #ee09;
-}
-
-body.dark-mode .content button {
-  color: #ee09;
-}
-
-body.light-mode {
-  background-color: #fff;
-  color: #333;
-  transition: background-color 0.3s ease;
-}
-
-body.dark-mode {
-  background-color: #10171d;
-  color: #dfdfdf;
-}
-
 body.dark-mode .dark-mode-toggle > button {
   color: #999;
 }
 
 body.dark-mode .dark-mode-toggle > button:last-child {
   color: lightblue;
+}
+
+.gatsby-highlight {
+  background-color: #011627;
+  border-radius: 0.3em;
+  margin: 0.5em -2.5rem;
+  margin-bottom: 1.8rem;
+  padding: 1.5rem;
+  overflow: auto;
+}
+
+@media screen and (max-width: 768px) {
+  .gatsby-highlight {
+    margin: 0.5em 0;
+    margin-bottom: 1.5rem;
+  }
+}
+
+/**
+ * Remove the default PrismJS theme background-color, border-radius, margin,
+ * padding and overflow.
+ * 1. Make the element just wide enough to fit its content.
+ * 2. Always fill the visible space in .gatsby-highlight.
+ * 3. Adjust the position of the line numbers
+ */
+.gatsby-highlight pre[class*='language-'] {
+  background-color: transparent;
+  margin: 0;
+  padding: 0;
+  overflow: initial;
+  float: left; /* 1 */
+  min-width: 100%; /* 2 */
+}
+
+.gatsby-highlight-code-line {
+  background-color: #011627;
+  display: block;
+  margin-right: -1em;
+  margin-left: -1em;
+  padding-right: 1em;
+  padding-left: 0.75em;
+  border-left: 0.25em solid #f99;
+}
+
+:not(pre) > code[class*='language-'] {
+  border-radius: 0.3em;
+  background: var(--inlineCode-bg);
+  color: var(--inlineCode-text);
+  padding: 0.15em 0.2em 0.05em;
+  white-space: normal;
+}
+
+.content .post > ul {
+  margin-left: 2.5rem;
+  margin-right: 2.5rem;
 }
