@@ -1,5 +1,5 @@
 ---
-title: Écrire des bindings BuckleScript
+title: Écrire des bindings BuckleScript - partie 1
 date: '2019-08-24T00:12:03.284Z'
 language: 'fr'
 tags: ['reasonml', 'bucklescript']
@@ -7,7 +7,7 @@ translations: ['en', 'en/hello-world']
 ---
 
 Quand j'ai besoin d'utiliser une librairie JavaScript en ReasonML, j'écris ses "bindings" BuckleScript.
-Dans cet article, nous allons créer les bindings de quelques fonctions de [Node.js](https://nodejs.org). Vous pouvez retrouver ces bindings [sur mon Github](https://github.com/DCKT/bs-node).
+Dans cette série d'articles, nous allons créer les bindings de quelques fonctions de [Node.js](https://nodejs.org). Vous pouvez retrouver ces bindings [sur mon Github](https://github.com/DCKT/bs-node).
 
 ## Commencer simplement
 
@@ -185,3 +185,8 @@ readFile(
   (),
 );
 ```
+
+## La suite
+
+Dans la prochaine partie, nous allons créer les bindings d'une fonction qui retourne une valeur comme `fs.createReadStream`. Nous verrons alors comment gérer les retours de façon abstraites.
+N'hésitez pas à me partager votre façon d'écrire vos bindings [sur Twitter](https://www.twitter.com/DCK__) !
