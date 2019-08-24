@@ -21,8 +21,6 @@ const styles = {
   picture: css({
     marginRight: rhythm(1 / 2),
     marginBottom: 0,
-    width: rhythm(2),
-    height: rhythm(2),
   }),
   socialLink: css({
     marginRight: 10,
@@ -39,7 +37,13 @@ const styles = {
 const Bio = ({ children }) => {
   return (
     <div className={styles.root}>
-      <img src={profilePic} alt={`DCK`} className={styles.picture} />
+      <img
+        src={profilePic}
+        alt={`DCK`}
+        className={styles.picture}
+        width={56}
+        height={56}
+      />
       <div>
         <div className={styles.bio}>{children}</div>
         <div className={styles.socials}>
