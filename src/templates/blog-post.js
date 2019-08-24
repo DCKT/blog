@@ -3,6 +3,7 @@ import Helmet from 'react-helmet'
 import { Link, graphql } from 'gatsby'
 import get from 'lodash/get'
 import Bio from '../components/Bio'
+import TagsList from '../components/TagsList'
 import Layout from '../components/Layout'
 import { rhythm, scale } from '../utils/typography'
 import 'prismjs/themes/prism-okaidia.css'
@@ -10,7 +11,9 @@ import 'prismjs/themes/prism-okaidia.css'
 const BlogPostTemplate = props => {
   const post = props.data.markdownRemark
   const siteTitle = get(props, `data.config.frontmatter.title`)
-  const siteBio = get(this, 'props.data.config.html')
+  const siteBio = get(props, 'data.config.html')
+  const tags = get(props, 'data.markdownRemark.frontmatter.tags')
+
   const siteDescription = post.excerpt
   const { previous, next } = props.pageContext
 
@@ -32,6 +35,7 @@ const BlogPostTemplate = props => {
       >
         {post.frontmatter.title}
       </h1>
+      {tags && tags.length ? <TagsList tags={tags} /> : null}
       <p
         style={{
           ...scale(-1 / 5),
@@ -108,6 +112,7 @@ export const pageQuery = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         translations
+        tags
       }
     }
   }

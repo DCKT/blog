@@ -1,9 +1,9 @@
 module.exports = {
   siteMetadata: {
-    siteUrl: 'https://jackbravo.github.io/gatsby-starter-i18n-blog/',
-    author: 'Thomas',
+    siteUrl: 'https://blog.thomasdeconinck.fr',
+    author: 'Thomas Deconinck',
     title: 'Blog',
-    description: 'A starter blog with i18n',
+    description: 'Personnal blog of Thomas Deconinck',
   },
   pathPrefix: '/',
   plugins: [
@@ -48,8 +48,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby Starter Blog`,
-        short_name: `GatsbyJS`,
+        name: `Blog DCK`,
+        short_name: `Blog DCK`,
         start_url: `/`,
         background_color: `#ffffff`,
         theme_color: `#663399`,
