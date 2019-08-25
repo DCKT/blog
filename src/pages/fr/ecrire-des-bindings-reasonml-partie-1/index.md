@@ -188,5 +188,5 @@ readFile(
 
 ## La suite
 
-Dans la prochaine partie, nous allons créer les bindings d'une fonction qui retourne une valeur comme `fs.createReadStream`. Nous verrons alors comment gérer les retours de façon abstraites.
+Dans la prochaine partie, nous allons créer les bindings d'une fonction qui retourne une valeur comme `fs.createReadStream`. Nous verrons alors comment gérer les retours de façon abstraite.
 N'hésitez pas à me partager votre façon d'écrire vos bindings [sur Twitter](https://www.twitter.com/DCK__) !
