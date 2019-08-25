@@ -17,6 +17,15 @@ hr {
   background: rgba(0, 0, 0, 0.25);
 }
 
+.post blockquote {
+  background: rgba(0, 0, 0, 0.03);
+}
+
+.dark-mode .post blockquote {
+  background: rgba(0, 0, 0, 0.25);
+  color: white;
+}
+
 .light-mode .blog a,
 .light-mode .blog button {
   color: var(--primary);

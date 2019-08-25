@@ -6,5 +6,6 @@ title: 'DCKのブログ'
 description: ''
 ---
 
-こんにちは！私は DCK です、ようこそ
+こんにちは！私は DCK です、ようこそ。
+私の好きなプログラミング言語は Reason と JavaScript です。
 [私の Twitter：＠DCK＿](https://twitter.com/DCK__)

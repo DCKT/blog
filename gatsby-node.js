@@ -8,6 +8,8 @@ exports.createPages = ({ graphql, actions }) => {
 
   return new Promise((resolve, reject) => {
     const blogIndex = path.resolve('./src/templates/blog-index.js')
+    const tagTemplate = path.resolve('src/templates/tags.js')
+
     resolve(
       graphql(
         `
@@ -19,8 +21,15 @@ exports.createPages = ({ graphql, actions }) => {
                 node {
                   frontmatter {
                     language
+                    tags
                   }
                 }
+              }
+            }
+
+            tagsGroup: allMarkdownRemark(limit: 2000) {
+              group(field: frontmatter___tags) {
+                fieldValue
               }
             }
           }
@@ -42,6 +51,18 @@ exports.createPages = ({ graphql, actions }) => {
             component: blogIndex,
             context: {
               language,
+            },
+          })
+        })
+
+        const tags = result.data.tagsGroup.group
+        // Make tag pages
+        tags.forEach(tag => {
+          createPage({
+            path: `/tags/${_.kebabCase(tag.fieldValue)}/`,
+            component: tagTemplate,
+            context: {
+              tag: tag.fieldValue,
             },
           })
         })
