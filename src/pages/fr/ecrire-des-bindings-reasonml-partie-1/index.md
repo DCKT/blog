@@ -26,9 +26,9 @@ Le chemin sera une `string` et le callback sera composé d'un `Js.Nullable.t(Js.
 external readFile: (string, (Js.Nullable.t(Js.Exn.t), string) => unit) = "readFile";
 ```
 
-On pourrait être tenter de rajouter des labels mais ici la fonction n'a que 2 entrées et ce sont des types différents, ça ne ferait qu'ajouter du bruit pour une faible utilité.
+On pourrait être tenté de rajouter des labels mais ici la fonction n'a que 2 entrées et ce sont des types différents, ça ne ferait qu'ajouter du bruit pour une faible utilité.
 
-Afin de rendre le code plus lisible et plus souple, nous allons écrire créer un type parametré `callback` :
+Afin de rendre le code plus lisible et plus souple, nous allons écrire créer un type paramétré `callback` :
 
 ```reason
 type callback('a) =  (Js.Nullable.t(Js.Exn.t), 'a) => unit;
@@ -48,7 +48,7 @@ Cela nous permet de ré-utiliser le type `callback` avec n'importe quel type de 
 
 ## Gérer tous les cas
 
-Si vous connaissez bien l'API de [readFile](https://nodejs.org/dist/latest-v10.x/docs/api/fs.html#fs_fs_readfile_path_options_callback), vous savez que cette fonction peut prendre un argument "options", celui-ci est situé entre le chemin et le callback et est optionnel, si l'on veut le même comportement, nous devons obligatoirement passer par des arguments labelisés.
+Si vous connaissez bien l'API de [readFile](https://nodejs.org/dist/latest-v10.x/docs/api/fs.html#fs_fs_readfile_path_options_callback), vous savez que cette fonction peut prendre un argument "options", celui-ci est situé entre le chemin et le callback et est optionnel, si l'on veut le même comportement, nous devons obligatoirement passer par des arguments labellisés.
 
 ```reason
 type callback('a) =  (Js.Nullable.t(Js.Exn.t), 'a) => unit;
@@ -68,14 +68,14 @@ readFile(
 );
 ```
 
-Avant de parler du type d'options, notez bien le type `unit` en dernier argument, en ReasonML, lorsque votre fonction dispose d'un argument facultatif, vous devez toujours rajouter `unit` argument supplémentaire car dans ce langage tout est [currifié](https://fr.wikipedia.org/wiki/Curryfication). Sans ce unit, notre fonction ne sera jamais considéré comme "appelé" si elle ne contient pas le paramètre `options`.
+Avant de parler du type d'options, notez bien le type `unit` en dernier argument, en ReasonML, lorsque votre fonction dispose d'un argument facultatif, vous devez toujours rajouter `unit` argument supplémentaire car dans ce langage tout est [currifié](https://fr.wikipedia.org/wiki/Curryfication). Sans ce unit, notre fonction ne sera jamais considérée comme "appelé" si elle ne contient pas le paramètre `options`.
 
 Selon la documentation de Node.js, `options` peut prendre 2 types différents :
 
 - un objet contenant l'encodage et le flag
 - une string seule pour l'encodage
 
-Malheureusement ce genre de cas ne peut être gérer sans fonction supplémentaire (on perd la notion du "0 cost bindings"), qui gère ces 2 cas.
+Malheureusement ce genre de cas ne peut être géré sans fonction supplémentaire (on perd la notion du "0 cost bindings"), qui gère ces 2 cas.
 
 Pour gérer différents types, nous allons utiliser un "variant" avec argument comme ceci :
 
