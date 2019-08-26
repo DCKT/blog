@@ -41,7 +41,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        //trackingId: `ADD YOUR TRACKING ID HERE`,
+        trackingId: `UA-97180278-1`,
       },
     },
     `gatsby-plugin-feed`,
@@ -51,8 +51,8 @@ module.exports = {
         name: `Blog DCK`,
         short_name: `Blog DCK`,
         start_url: `/`,
-        background_color: `#ffffff`,
-        theme_color: `#663399`,
+        background_color: `#fff`,
+        theme_color: `#ff5722`,
         display: `minimal-ui`,
         icon: `src/assets/gatsby-icon.png`,
       },
