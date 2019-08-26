@@ -3,7 +3,7 @@ title: Écrire des bindings BuckleScript - partie 1
 date: '2019-08-24T00:12:03.284Z'
 language: 'fr'
 tags: ['reasonml', 'bucklescript']
-translations: ['en', 'en/hello-world']
+translations: ['en', 'en/write-bucklescript-bindings-part-1']
 ---
 
 Quand j'ai besoin d'utiliser une librairie JavaScript en ReasonML, j'écris ses "bindings" BuckleScript.
