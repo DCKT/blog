@@ -3,7 +3,7 @@ title: Écrire des bindings BuckleScript - partie 2
 date: '2019-08-25T00:12:03.284Z'
 language: 'fr'
 tags: ['reasonml', 'bucklescript']
-translations: ['en', 'en/hello-world']
+translations: ['en', 'en/write-bucklescript-bindings-part-2']
 ---
 
 > Vous pouvez retrouver la première partie [ici](/fr/ecrire-des-bindings-reasonml-partie-1/)

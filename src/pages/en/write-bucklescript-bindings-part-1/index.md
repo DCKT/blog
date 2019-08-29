@@ -1,6 +1,6 @@
 ---
 title: Write BuckleScript bindings - part 1
-date: '2015-05-01T22:12:03.284Z'
+date: '2015-08-24T22:12:03.284Z'
 language: en
 translations: ['fr', 'fr/ecrire-des-bindings-reasonml-partie-1']
 ---
