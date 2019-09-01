@@ -60,9 +60,9 @@ let fetchCats = () =>
 ```
 
 On peut constater que c'est très verbeux et demande de la rigueur.
-Si la resource venait à évoluer, il faudrait chaque type et fonction de conversion, mais autre point non négligeable, ce n'est pas **type safe**.
+Si la ressource venait à évoluer, il faudrait modifier chaque type et sa fonction de conversion, mais le point le plus problématique et que ce n'est pas **type safe**.
 
-Ici dans notre cas, on ne peut pas déterminer si l'API retourne vraiment un `int` pour l'age du chat autrement qu'à la "run-time". C'est pour cela qu'il existe des solutions de "décodages" que je vais vous présenter ici.
+Ici dans notre cas, on ne peut pas déterminer si l'API retourne vraiment un `int` pour l'age du chat autrement qu'à la "run-time" dès lorsque l'on va utiliser cette valeur. C'est pour cela qu'il existe des solutions de "décodages" que je vais vous présenter ici.
 
 #### bs-json
 
@@ -92,7 +92,7 @@ let fetchCats = () =>
   });
 ```
 
-Si l'API nous retourne une liste de chat avec un mauvais type, nous aurons une erreur à la "run-time".
+Si l'API nous retourne une liste de chat avec un mauvais type, nous aurons une erreur à la "run-time" bien avant l'utilisation de valeur.
 
 Cepdendant cela reste assez verbeux, à chaque nouvelle entrée, il faut l'ajouter dans notre décodeur. J'ai découvert récemment une librairie permettant la même chose sans le coté verbeux.
 
