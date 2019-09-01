@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "@emotion/core": "^10.0.16",
+    "date-fns": "^2.0.1",
     "emotion": "^10.0.14",
     "gatsby": "^2.0.19",
     "gatsby-plugin-feed": "^2.0.8",

@@ -6,6 +6,7 @@ import Bio from '../components/Bio'
 import TagsList from '../components/TagsList'
 import Layout from '../components/Layout'
 import { rhythm, scale } from '../utils/typography'
+import { formatDate } from '../utils/formatDate'
 import 'prismjs/themes/prism-okaidia.css'
 
 const BlogPostTemplate = props => {
@@ -15,7 +16,7 @@ const BlogPostTemplate = props => {
   const tags = get(props, 'data.markdownRemark.frontmatter.tags')
 
   const siteDescription = post.excerpt
-  const { previous, next } = props.pageContext
+  const { previous, next, language } = props.pageContext
 
   return (
     <Layout
@@ -44,7 +45,7 @@ const BlogPostTemplate = props => {
           marginTop: rhythm(-1),
         }}
       >
-        {post.frontmatter.date}
+        {formatDate(language, post.frontmatter.date)}
       </p>
       <div
         className="post"

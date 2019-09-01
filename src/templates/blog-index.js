@@ -6,6 +6,7 @@ import Helmet from 'react-helmet'
 import Bio from '../components/Bio'
 import Layout from '../components/Layout'
 import { rhythm } from '../utils/typography'
+import { formatDate } from '../utils/formatDate'
 
 class BlogIndex extends React.Component {
   render() {
@@ -14,6 +15,7 @@ class BlogIndex extends React.Component {
     const siteTitle = get(config, 'frontmatter.title')
     const description = get(config, 'frontmatter.description')
     const bio = get(config, 'html')
+    const language = this.props.pageContext.language
 
     return (
       <Layout location={this.props.location} config={config}>
@@ -27,6 +29,7 @@ class BlogIndex extends React.Component {
         </Bio>
         {posts.map(({ node }) => {
           const title = get(node, 'frontmatter.title') || node.fields.slug
+
           return (
             <div key={node.fields.slug}>
               <h3
@@ -39,7 +42,7 @@ class BlogIndex extends React.Component {
                   {title}
                 </Link>
               </h3>
-              <small>{node.frontmatter.date}</small>
+              <small>{formatDate(language, node.frontmatter.date)}</small>
               <p dangerouslySetInnerHTML={{ __html: node.excerpt }} />
             </div>
           )
