@@ -3,7 +3,7 @@ title: Décoder un retour API en ReasonML
 date: '2019-09-01T00:12:03.284Z'
 language: 'fr'
 tags: ['reasonml']
-translations: []
+translations: ['en', 'en/decode-api-payload-reasonml']
 ---
 
 En ReasonML, lorsque l'on récupère les informations d'une API, on se retrouve à parcourir l'objet manuellement et à se baser sur l'inférence :
@@ -98,7 +98,7 @@ Cepdendant cela reste assez verbeux, à chaque nouvelle entrée, il faut l'ajout
 
 #### decco
 
-C'est une librairie qui permet via l'usage d'un [ppx](https://blog.hackages.io/reasonml-ppx-8ecd663d5640) de générer automatiquement des décodeurs/encodeurs à partir d'un type !
+Cette libraire s'appelle [decco](https://github.com/ryb73/ppx_decco), elle repose sur l'usage d'un [ppx](https://blog.hackages.io/reasonml-ppx-8ecd663d5640) qui permet de générer automatiquement des décodeurs/encodeurs à partir d'un type !
 
 ```reason
 [@decco]
