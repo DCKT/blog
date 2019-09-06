@@ -100,7 +100,7 @@ Recently, I discover a library without omitting the verbose part.
 
 #### decco
 
-This module is called [decco](https://github.com/ryb73/ppx_decco), it's based on theuse of a [ppx](https://blog.hackages.io/reasonml-ppx-8ecd663d5640) which generate automatically the decoder/encoder from a given type !
+This module is called [decco](https://github.com/ryb73/ppx_decco), it's based on a [ppx](https://blog.hackages.io/reasonml-ppx-8ecd663d5640) which generate automatically the decoder/encoder from a given type !
 
 ```reason
 [@decco]
