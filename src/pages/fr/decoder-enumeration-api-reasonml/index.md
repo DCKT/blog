@@ -3,7 +3,7 @@ title: Décoder une énumération depuis une API en Reason avec decco
 date: '2019-09-07T00:12:03.284Z'
 language: 'fr'
 tags: ['reasonml']
-translations: []
+translations: ['en', 'en/decode-enumeration-api-reasonml']
 ---
 
 Dans un précédent article, je vous parlais de [decco](https://github.com/ryb73/ppx_decco) pour décoder les données d'une API. Aujourd'hui, nous allons voir comment décoder une énumération de string avec cette librairie.
