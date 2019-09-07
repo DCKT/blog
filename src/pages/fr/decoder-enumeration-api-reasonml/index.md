@@ -60,7 +60,7 @@ Voilà pour la sérialisation ! Rien de plus n'est nécessaire, nous pouvons pas
 
 #### Gérer la désérialisation
 
-C'est presque la même chose que la sérialisation sauf que vous devez gérer les cas d'erreurs en plus :
+C'est presque la même chose que la sérialisation sauf qu'il faut gérer les cas d'erreurs en plus :
 
 ```reason
 let decoder: Decco.decoder(brand) = json => {
