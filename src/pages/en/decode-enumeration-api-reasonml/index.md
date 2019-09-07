@@ -52,7 +52,7 @@ let encoder: Decco.encoder(brand) = (brand: brand) => {
 };
 ```
 
-Here, I declared the types explicitly to make it clearer but you also let the inference does it job !
+Here, I declared the types explicitly to make it clearer but you can also let the inference does it job !
 
 About the `encoder` function, it takes a parameter of our type we need to convert and transform it in a `string` in order to invoke the `Decco.stringToJson` function who will make the JSON conversion.
 
