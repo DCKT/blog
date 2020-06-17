@@ -289,3 +289,5 @@ Comme en JavaScript, il est possible d'utiliser le [spread operator](https://rea
 # Conclusion
 
 Nous voilà avec un solution de navigation assez simpliste mais robuste ! Dans un prochain article, nous allons rendre la navigation encore plus safe en utilisant un type pour nos ID plutôt qu'une simple string !
+
+Voici le github du projet en lien avec cet article : [the-commerce](https://github.com/DCKT/the-commerce/releases/tag/v0.1)
