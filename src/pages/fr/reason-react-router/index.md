@@ -53,7 +53,7 @@ let make = () => {
   let route = ReasonReactRouter.useUrl();
 
   switch (route.path) {
-    | [""] => <PageHome />
+    | [] => <PageHome />
     | ["products"] => <PageProducts />
     | ["products", productId] => <PageProductDetails productId />
     | _ => <strong>"This page does not exist !"->React.string</strong>
@@ -112,7 +112,7 @@ Pour procéder à cela, pas de magie ! Nous allons faire une fonction pour chacu
 
 ```reason
 let routeFromUrl = (url: ReasonReact.Router.url) => switch (url.path) {
-    | [""] => Home
+    | [] => Home
     | ["products"] => Products
     | ["products", productId] => ProductDetails(productId)
     | _ => NotFound
@@ -142,7 +142,7 @@ type route =
   | NotFound;
 
 let routeFromUrl = (url: ReasonReact.Router.url) => switch (url.path) {
-  | [""] => Home
+  | [] => Home
   | ["products"] => Products
   | ["products", productId] => ProductDetails(productId)
   | _ => NotFound
@@ -260,12 +260,12 @@ type route =
 
 
 let routeFromUrl = (url: ReasonReact.Router.url) => switch (url.path) {
-  | [""] => Home
+  | [] => Home
   | ["products"] => Products
   | ["products", productId] => ProductDetails(productId)
   | ["admin", ...rest] => {
       switch (rest) {
-        | [""] => Dashboard
+        | [] => Dashboard
         | ["products"] => DashboardProducts
         | ["products", productId] => DashboardProductDetails(productId)
       }
