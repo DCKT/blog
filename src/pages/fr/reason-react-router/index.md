@@ -147,12 +147,13 @@ let routeFromUrl = (url: ReasonReact.Router.url) => switch (url.path) {
   | ["products", productId] => ProductDetails(productId)
   | _ => NotFound
 };
-let routeToUrl = switch (route) {
-  | Home => ""
-  | Products => "/products"
-  | ProductDetails(productId) => "/products/"++productId
-  | NotFound => "/404"
-};
+let routeToUrl = route =>
+  switch (route) {
+    | Home => ""
+    | Products => "/products"
+    | ProductDetails(productId) => "/products/"++productId
+    | NotFound => "/404"
+  };
 ```
 
 ## Utiliser notre type
