@@ -8,6 +8,7 @@ import Layout from '../components/Layout'
 import { rhythm, scale } from '../utils/typography'
 import { formatDate } from '../utils/formatDate'
 import 'prismjs/themes/prism-okaidia.css'
+import { IoLogoTwitter as TwitterIcon } from 'react-icons/io'
 
 const BlogPostTemplate = props => {
   const post = props.data.markdownRemark
@@ -52,6 +53,20 @@ const BlogPostTemplate = props => {
         style={{ fontSize: '0.95rem' }}
         dangerouslySetInnerHTML={{ __html: post.html }}
       />
+
+      <div>
+        <a
+          href="https://twitter.com/share?ref_src=twsrc%5Etfw"
+          className="twitter-share-button"
+          data-show-count="false"
+          data-text={post.frontmatter.title}
+          target="_blank"
+        >
+          {language === 'fr' ? 'Partager cet article' : 'Share this article'}
+          <TwitterIcon />
+        </a>
+        <script async src="https://platform.twitter.com/widgets.js"></script>
+      </div>
       <hr
         style={{
           marginBottom: rhythm(1),

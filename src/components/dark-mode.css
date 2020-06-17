@@ -10,6 +10,17 @@
   --inlineCode-text: #e6e6e6;
 }
 
+.twitter-share-button {
+  display: inline-flex;
+  align-items: center;
+  border: none;
+  box-shadow: none;
+}
+
+.twitter-share-button > svg {
+  margin-left: 0.65rem;
+}
+
 hr {
   background: rgba(0, 0, 0, 0.05);
 }
