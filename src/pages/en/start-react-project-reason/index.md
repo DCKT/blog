@@ -6,7 +6,7 @@ tags: ['reasonml', 'react']
 translations: ['fr', 'fr/demarrer-un-projet-reasonml-frontend']
 ---
 
-That's a little while about hearing the usage of ReasonML with the [React library](https://reactjs.org/) but you didn't had time to take a look seriously ? In this article, we're gonna see how to quickly create a React application which will serve as our common thread for the next articles !
+That's a little while about you heard about the usage of ReasonML with the [React library](https://reactjs.org/) but you didn't had time to take a look seriously ? In this article, we're gonna see how to quickly create a React application which will serve as our common thread for the next articles !
 
 # Use a generator
 
