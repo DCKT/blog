@@ -3,7 +3,7 @@ title: Démarrer un projet React en ReasonML
 date: '2020-06-13T00:12:03.284Z'
 language: 'fr'
 tags: ['reasonml', 'react']
-translations: []
+translations: ['en', 'en/start-react-project-reason']
 ---
 
 Voilà un petit moment que vous entendez parler de l'utilisation de ReasonML avec le framework [React](https://reactjs.org/) mais vous n'avez pas encore eu l'occasion de vous y mettre vraiment ? Dans cet article, nous allons voir comment créer rapidement une application en React qui nous servira de fil rouge pour de futurs articles !
@@ -37,7 +37,7 @@ npm -g install @tmattio/spin
 spin new bs-react the-commerce
 ```
 
-Vous devrez aller configurer le projet via l'interface de commande.
+Vous devrez alors configurer le projet via l'interface de commande.
 
 Petite subtilitée, le générateur nous propose d'ajouter [TailwindCSS](https://tailwindcss.com/), un framework CSS utilitaire très intéressant, dans cet article nous allons l'inclure dans notre application.
 
