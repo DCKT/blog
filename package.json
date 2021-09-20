@@ -18,7 +18,7 @@
     "lodash": "4.17.20",
     "next": "10.0.6",
     "postcss": "8.2.4",
-    "prismjs": "1.23.0",
+    "prismjs": "1.25.0",
     "react": "17.0.1",
     "react-dom": "17.0.1",
     "react-icons": "4.1.0",
